@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D13EB09263F2596006BA44A /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D13EB08263F2596006BA44A /* NewGameView.swift */; };
+		6D13EB0B263F3389006BA44A /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D13EB0A263F3389006BA44A /* ScreenView.swift */; };
+		6D13EB0D263F3A65006BA44A /* SaveBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D13EB0C263F3A65006BA44A /* SaveBanner.swift */; };
+		6D20027E263CD2DD0035F560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20027D263CD2DD0035F560 /* AppDelegate.swift */; };
+		6D200280263CD2DD0035F560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20027F263CD2DD0035F560 /* SceneDelegate.swift */; };
+		6D200282263CD2DD0035F560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D200281263CD2DD0035F560 /* ViewController.swift */; };
+		6D200285263CD2DD0035F560 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D200283263CD2DD0035F560 /* Main.storyboard */; };
+		6D200287263CD2E10035F560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D200286263CD2E10035F560 /* Assets.xcassets */; };
+		6D20028A263CD2E10035F560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D200288263CD2E10035F560 /* LaunchScreen.storyboard */; };
+		6D20028F263CD2E10035F560 /* Caddy App Watch WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6D20028E263CD2E10035F560 /* Caddy App Watch WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6D200295263CD2E10035F560 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D200293263CD2E10035F560 /* Interface.storyboard */; };
+		6D200297263CD2E20035F560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D200296263CD2E20035F560 /* Assets.xcassets */; };
+		6D20029E263CD2E20035F560 /* Caddy App Watch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6D20029D263CD2E20035F560 /* Caddy App Watch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6D2002A3263CD2E20035F560 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002A2263CD2E20035F560 /* InterfaceController.swift */; };
+		6D2002A5263CD2E20035F560 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002A4263CD2E20035F560 /* ExtensionDelegate.swift */; };
+		6D2002A7263CD2E20035F560 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002A6263CD2E20035F560 /* NotificationController.swift */; };
+		6D2002A9263CD2E20035F560 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002A8263CD2E20035F560 /* ComplicationController.swift */; };
+		6D2002AB263CD2E30035F560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D2002AA263CD2E30035F560 /* Assets.xcassets */; };
+		6D2002C6263CD33B0035F560 /* AppendOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002BB263CD33A0035F560 /* AppendOption.swift */; };
+		6D2002C7263CD33B0035F560 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002BC263CD33A0035F560 /* TextField.swift */; };
+		6D2002C8263CD33B0035F560 /* GameSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002BD263CD33B0035F560 /* GameSetupView.swift */; };
+		6D2002C9263CD33B0035F560 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002BE263CD33B0035F560 /* Player.swift */; };
+		6D2002CA263CD33B0035F560 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002BF263CD33B0035F560 /* Settings.swift */; };
+		6D2002CB263CD33B0035F560 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002C0263CD33B0035F560 /* Round.swift */; };
+		6D2002CC263CD33B0035F560 /* HomeMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002C1263CD33B0035F560 /* HomeMenuView.swift */; };
+		6D2002CD263CD33B0035F560 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002C2263CD33B0035F560 /* Hole.swift */; };
+		6D2002CE263CD33B0035F560 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002C3263CD33B0035F560 /* InputField.swift */; };
+		6D2002CF263CD33B0035F560 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002C4263CD33B0035F560 /* Int.swift */; };
+		6D2002D0263CD33B0035F560 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002C5263CD33B0035F560 /* UIView.swift */; };
+		6D2002D2263D51F10035F560 /* HolePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002D1263D51F10035F560 /* HolePickerController.swift */; };
+		6D2002D4263D73F40035F560 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2002D3263D73F40035F560 /* Settings.swift */; };
+		6D449D76263D90C6000C91FD /* HoleRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D449D75263D90C6000C91FD /* HoleRowController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D200290263CD2E10035F560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D200272263CD2DD0035F560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D20028D263CD2E10035F560;
+			remoteInfo = "Caddy App Watch WatchKit App";
+		};
+		6D20029F263CD2E20035F560 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D200272263CD2DD0035F560 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D20029C263CD2E20035F560;
+			remoteInfo = "Caddy App Watch WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6D2002B3263CD2E30035F560 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6D20029E263CD2E20035F560 /* Caddy App Watch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D2002B7263CD2E30035F560 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6D20028F263CD2E10035F560 /* Caddy App Watch WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6D13EB08263F2596006BA44A /* NewGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
+		6D13EB0A263F3389006BA44A /* ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
+		6D13EB0C263F3A65006BA44A /* SaveBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBanner.swift; sourceTree = "<group>"; };
+		6D20027A263CD2DD0035F560 /* Caddy App Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caddy App Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D20027D263CD2DD0035F560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D20027F263CD2DD0035F560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6D200281263CD2DD0035F560 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D200284263CD2DD0035F560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D200286263CD2E10035F560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D200289263CD2E10035F560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D20028B263CD2E10035F560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D20028E263CD2E10035F560 /* Caddy App Watch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caddy App Watch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D200294263CD2E10035F560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		6D200296263CD2E20035F560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D200298263CD2E20035F560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D20029D263CD2E20035F560 /* Caddy App Watch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Caddy App Watch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D2002A2263CD2E20035F560 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		6D2002A4263CD2E20035F560 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		6D2002A6263CD2E20035F560 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		6D2002A8263CD2E20035F560 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		6D2002AA263CD2E30035F560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D2002AC263CD2E30035F560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D2002AD263CD2E30035F560 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		6D2002BB263CD33A0035F560 /* AppendOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppendOption.swift; sourceTree = "<group>"; };
+		6D2002BC263CD33A0035F560 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		6D2002BD263CD33B0035F560 /* GameSetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSetupView.swift; sourceTree = "<group>"; };
+		6D2002BE263CD33B0035F560 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		6D2002BF263CD33B0035F560 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		6D2002C0263CD33B0035F560 /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
+		6D2002C1263CD33B0035F560 /* HomeMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMenuView.swift; sourceTree = "<group>"; };
+		6D2002C2263CD33B0035F560 /* Hole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hole.swift; sourceTree = "<group>"; };
+		6D2002C3263CD33B0035F560 /* InputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		6D2002C4263CD33B0035F560 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		6D2002C5263CD33B0035F560 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		6D2002D1263D51F10035F560 /* HolePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolePickerController.swift; sourceTree = "<group>"; };
+		6D2002D3263D73F40035F560 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		6D449D75263D90C6000C91FD /* HoleRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleRowController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D200277263CD2DD0035F560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D20029A263CD2E20035F560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D200271263CD2DD0035F560 = {
+			isa = PBXGroup;
+			children = (
+				6D20027C263CD2DD0035F560 /* Caddy App Watch */,
+				6D200292263CD2E10035F560 /* Caddy App Watch WatchKit App */,
+				6D2002A1263CD2E20035F560 /* Caddy App Watch WatchKit Extension */,
+				6D20027B263CD2DD0035F560 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D20027B263CD2DD0035F560 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D20027A263CD2DD0035F560 /* Caddy App Watch.app */,
+				6D20028E263CD2E10035F560 /* Caddy App Watch WatchKit App.app */,
+				6D20029D263CD2E20035F560 /* Caddy App Watch WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D20027C263CD2DD0035F560 /* Caddy App Watch */ = {
+			isa = PBXGroup;
+			children = (
+				6D20027D263CD2DD0035F560 /* AppDelegate.swift */,
+				6D20027F263CD2DD0035F560 /* SceneDelegate.swift */,
+				6D200281263CD2DD0035F560 /* ViewController.swift */,
+				6D2002BE263CD33B0035F560 /* Player.swift */,
+				6D2002C0263CD33B0035F560 /* Round.swift */,
+				6D2002C2263CD33B0035F560 /* Hole.swift */,
+				6D2002C1263CD33B0035F560 /* HomeMenuView.swift */,
+				6D13EB0A263F3389006BA44A /* ScreenView.swift */,
+				6D13EB08263F2596006BA44A /* NewGameView.swift */,
+				6D2002BD263CD33B0035F560 /* GameSetupView.swift */,
+				6D13EB0C263F3A65006BA44A /* SaveBanner.swift */,
+				6D2002C3263CD33B0035F560 /* InputField.swift */,
+				6D2002BB263CD33A0035F560 /* AppendOption.swift */,
+				6D2002BF263CD33B0035F560 /* Settings.swift */,
+				6D2002C4263CD33B0035F560 /* Int.swift */,
+				6D2002BC263CD33A0035F560 /* TextField.swift */,
+				6D2002C5263CD33B0035F560 /* UIView.swift */,
+				6D200283263CD2DD0035F560 /* Main.storyboard */,
+				6D200286263CD2E10035F560 /* Assets.xcassets */,
+				6D200288263CD2E10035F560 /* LaunchScreen.storyboard */,
+				6D20028B263CD2E10035F560 /* Info.plist */,
+			);
+			path = "Caddy App Watch";
+			sourceTree = "<group>";
+		};
+		6D200292263CD2E10035F560 /* Caddy App Watch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				6D200293263CD2E10035F560 /* Interface.storyboard */,
+				6D200296263CD2E20035F560 /* Assets.xcassets */,
+				6D200298263CD2E20035F560 /* Info.plist */,
+			);
+			path = "Caddy App Watch WatchKit App";
+			sourceTree = "<group>";
+		};
+		6D2002A1263CD2E20035F560 /* Caddy App Watch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6D2002A2263CD2E20035F560 /* InterfaceController.swift */,
+				6D2002D1263D51F10035F560 /* HolePickerController.swift */,
+				6D449D75263D90C6000C91FD /* HoleRowController.swift */,
+				6D2002D3263D73F40035F560 /* Settings.swift */,
+				6D2002A4263CD2E20035F560 /* ExtensionDelegate.swift */,
+				6D2002A6263CD2E20035F560 /* NotificationController.swift */,
+				6D2002A8263CD2E20035F560 /* ComplicationController.swift */,
+				6D2002AA263CD2E30035F560 /* Assets.xcassets */,
+				6D2002AC263CD2E30035F560 /* Info.plist */,
+				6D2002AD263CD2E30035F560 /* PushNotificationPayload.apns */,
+			);
+			path = "Caddy App Watch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D200279263CD2DD0035F560 /* Caddy App Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D2002B8263CD2E30035F560 /* Build configuration list for PBXNativeTarget "Caddy App Watch" */;
+			buildPhases = (
+				6D200276263CD2DD0035F560 /* Sources */,
+				6D200277263CD2DD0035F560 /* Frameworks */,
+				6D200278263CD2DD0035F560 /* Resources */,
+				6D2002B7263CD2E30035F560 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D200291263CD2E10035F560 /* PBXTargetDependency */,
+			);
+			name = "Caddy App Watch";
+			productName = "Caddy App Watch";
+			productReference = 6D20027A263CD2DD0035F560 /* Caddy App Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D20028D263CD2E10035F560 /* Caddy App Watch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D2002B4263CD2E30035F560 /* Build configuration list for PBXNativeTarget "Caddy App Watch WatchKit App" */;
+			buildPhases = (
+				6D20028C263CD2E10035F560 /* Resources */,
+				6D2002B3263CD2E30035F560 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D2002A0263CD2E20035F560 /* PBXTargetDependency */,
+			);
+			name = "Caddy App Watch WatchKit App";
+			productName = "Caddy App Watch WatchKit App";
+			productReference = 6D20028E263CD2E10035F560 /* Caddy App Watch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		6D20029C263CD2E20035F560 /* Caddy App Watch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D2002B0263CD2E30035F560 /* Build configuration list for PBXNativeTarget "Caddy App Watch WatchKit Extension" */;
+			buildPhases = (
+				6D200299263CD2E20035F560 /* Sources */,
+				6D20029A263CD2E20035F560 /* Frameworks */,
+				6D20029B263CD2E20035F560 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Caddy App Watch WatchKit Extension";
+			productName = "Caddy App Watch WatchKit Extension";
+			productReference = 6D20029D263CD2E20035F560 /* Caddy App Watch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D200272263CD2DD0035F560 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					6D200279263CD2DD0035F560 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					6D20028D263CD2E10035F560 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					6D20029C263CD2E20035F560 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 6D200275263CD2DD0035F560 /* Build configuration list for PBXProject "Caddy App Watch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D200271263CD2DD0035F560;
+			productRefGroup = 6D20027B263CD2DD0035F560 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D200279263CD2DD0035F560 /* Caddy App Watch */,
+				6D20028D263CD2E10035F560 /* Caddy App Watch WatchKit App */,
+				6D20029C263CD2E20035F560 /* Caddy App Watch WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D200278263CD2DD0035F560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D20028A263CD2E10035F560 /* LaunchScreen.storyboard in Resources */,
+				6D200287263CD2E10035F560 /* Assets.xcassets in Resources */,
+				6D200285263CD2DD0035F560 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D20028C263CD2E10035F560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D200297263CD2E20035F560 /* Assets.xcassets in Resources */,
+				6D200295263CD2E10035F560 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D20029B263CD2E20035F560 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D2002AB263CD2E30035F560 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D200276263CD2DD0035F560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D2002C8263CD33B0035F560 /* GameSetupView.swift in Sources */,
+				6D2002CF263CD33B0035F560 /* Int.swift in Sources */,
+				6D13EB0D263F3A65006BA44A /* SaveBanner.swift in Sources */,
+				6D13EB09263F2596006BA44A /* NewGameView.swift in Sources */,
+				6D2002CB263CD33B0035F560 /* Round.swift in Sources */,
+				6D200282263CD2DD0035F560 /* ViewController.swift in Sources */,
+				6D2002CA263CD33B0035F560 /* Settings.swift in Sources */,
+				6D13EB0B263F3389006BA44A /* ScreenView.swift in Sources */,
+				6D20027E263CD2DD0035F560 /* AppDelegate.swift in Sources */,
+				6D2002C6263CD33B0035F560 /* AppendOption.swift in Sources */,
+				6D2002C9263CD33B0035F560 /* Player.swift in Sources */,
+				6D2002CC263CD33B0035F560 /* HomeMenuView.swift in Sources */,
+				6D2002C7263CD33B0035F560 /* TextField.swift in Sources */,
+				6D2002D0263CD33B0035F560 /* UIView.swift in Sources */,
+				6D200280263CD2DD0035F560 /* SceneDelegate.swift in Sources */,
+				6D2002CD263CD33B0035F560 /* Hole.swift in Sources */,
+				6D2002CE263CD33B0035F560 /* InputField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D200299263CD2E20035F560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D2002D4263D73F40035F560 /* Settings.swift in Sources */,
+				6D2002A7263CD2E20035F560 /* NotificationController.swift in Sources */,
+				6D2002D2263D51F10035F560 /* HolePickerController.swift in Sources */,
+				6D2002A9263CD2E20035F560 /* ComplicationController.swift in Sources */,
+				6D2002A5263CD2E20035F560 /* ExtensionDelegate.swift in Sources */,
+				6D2002A3263CD2E20035F560 /* InterfaceController.swift in Sources */,
+				6D449D76263D90C6000C91FD /* HoleRowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D200291263CD2E10035F560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D20028D263CD2E10035F560 /* Caddy App Watch WatchKit App */;
+			targetProxy = 6D200290263CD2E10035F560 /* PBXContainerItemProxy */;
+		};
+		6D2002A0263CD2E20035F560 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D20029C263CD2E20035F560 /* Caddy App Watch WatchKit Extension */;
+			targetProxy = 6D20029F263CD2E20035F560 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D200283263CD2DD0035F560 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D200284263CD2DD0035F560 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D200288263CD2E10035F560 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D200289263CD2E10035F560 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6D200293263CD2E10035F560 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D200294263CD2E10035F560 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D2002AE263CD2E30035F560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D2002AF263CD2E30035F560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6D2002B1263CD2E30035F560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3C436QQA9;
+				INFOPLIST_FILE = "Caddy App Watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "karlcridland.Caddy-App-Watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		6D2002B2263CD2E30035F560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3C436QQA9;
+				INFOPLIST_FILE = "Caddy App Watch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "karlcridland.Caddy-App-Watch.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		6D2002B5263CD2E30035F560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3C436QQA9;
+				IBSC_MODULE = Caddy_App_Watch_WatchKit_Extension;
+				INFOPLIST_FILE = "Caddy App Watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "karlcridland.Caddy-App-Watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		6D2002B6263CD2E30035F560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3C436QQA9;
+				IBSC_MODULE = Caddy_App_Watch_WatchKit_Extension;
+				INFOPLIST_FILE = "Caddy App Watch WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "karlcridland.Caddy-App-Watch.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		6D2002B9263CD2E30035F560 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3C436QQA9;
+				INFOPLIST_FILE = "Caddy App Watch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "karlcridland.Caddy-App-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6D2002BA263CD2E30035F560 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3C436QQA9;
+				INFOPLIST_FILE = "Caddy App Watch/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "karlcridland.Caddy-App-Watch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D200275263CD2DD0035F560 /* Build configuration list for PBXProject "Caddy App Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D2002AE263CD2E30035F560 /* Debug */,
+				6D2002AF263CD2E30035F560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D2002B0263CD2E30035F560 /* Build configuration list for PBXNativeTarget "Caddy App Watch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D2002B1263CD2E30035F560 /* Debug */,
+				6D2002B2263CD2E30035F560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D2002B4263CD2E30035F560 /* Build configuration list for PBXNativeTarget "Caddy App Watch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D2002B5263CD2E30035F560 /* Debug */,
+				6D2002B6263CD2E30035F560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D2002B8263CD2E30035F560 /* Build configuration list for PBXNativeTarget "Caddy App Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D2002B9263CD2E30035F560 /* Debug */,
+				6D2002BA263CD2E30035F560 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D200272263CD2DD0035F560 /* Project object */;
+}

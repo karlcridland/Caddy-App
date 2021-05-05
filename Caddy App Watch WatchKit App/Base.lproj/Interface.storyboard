@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch40"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller contentMode="center" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Caddy_App_Watch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="overlap" id="IEe-ZG-eFB">
+                            <items>
+                                <group width="1" height="1" alignment="left" layout="vertical" id="Def-db-VX2">
+                                    <items>
+                                        <separator alignment="left" id="vUG-Qp-2cH">
+                                            <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </separator>
+                                        <label alignment="center" hidden="YES" text="Game Over.\nScore 10 sdfkj sfd" textAlignment="center" numberOfLines="2" id="20Z-yE-dla">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <separator alignment="left" id="7wX-D4-4FL">
+                                            <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </separator>
+                                        <button width="1" alignment="left" title="new game" id="vBM-dU-IZc">
+                                            <connections>
+                                                <action selector="restart" destination="AgC-eL-Hgc" id="AbM-e8-Pe0"/>
+                                            </connections>
+                                        </button>
+                                        <button width="1" alignment="left" title="settings" id="lHs-og-BEX">
+                                            <connections>
+                                                <action selector="openSettings" destination="AgC-eL-Hgc" id="bNf-74-KA3"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="1" height="1" alignment="left" hidden="YES" layout="vertical" id="R3I-ij-f3o">
+                                    <items>
+                                        <group width="1" height="0.10000000000000001" alignment="left" id="iyM-AF-F12">
+                                            <items>
+                                                <label width="0.5" height="1" alignment="left" text="Hole 1" textAlignment="center" id="hv3-U6-qeA">
+                                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                </label>
+                                                <separator alignment="left" id="jlb-JB-uyK">
+                                                    <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <separator alignment="left" id="4nh-P7-Tb5">
+                                                    <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <separator alignment="left" id="1Ml-ys-vjw">
+                                                    <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <separator alignment="left" id="mtf-sb-s99">
+                                                    <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <separator alignment="left" id="WEK-v8-uxZ">
+                                                    <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <timer width="0.5" alignment="left" textAlignment="center" id="A3k-Lt-qWo">
+                                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                </timer>
+                                            </items>
+                                        </group>
+                                        <group width="1" height="0.45000000000000001" alignment="center" verticalAlignment="bottom" id="qMl-sa-yjm" userLabel="Top">
+                                            <items>
+                                                <group width="0.5" height="1" alignment="left" layout="vertical" id="eXa-wH-fzk" userLabel="Left">
+                                                    <items>
+                                                        <label width="1" height="0.69999999999999996" alignment="left" text="0" textAlignment="center" id="W2w-fo-XWN">
+                                                            <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                                        </label>
+                                                        <label width="1" height="0.20000000000000001" alignment="center" verticalAlignment="center" text="score" textAlignment="center" id="gPm-TR-ML9">
+                                                            <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                                <group width="0.51000000000000001" height="1" alignment="left" layout="vertical" id="sdU-TX-GJ5" userLabel="Right">
+                                                    <items>
+                                                        <button width="0.59999999999999998" height="0.59999999999999998" alignment="center" backgroundImage="arrow.right.circle.fill" catalog="system" id="01f-5R-zpU">
+                                                            <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="nextHole" destination="AgC-eL-Hgc" id="sIU-nj-7wL"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label width="1" height="0.20000000000000001" alignment="center" verticalAlignment="center" text="next hole" textAlignment="center" id="p15-OM-CWz" userLabel="next hole">
+                                                            <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                        </group>
+                                        <group width="1" height="0.45000000000000001" alignment="center" verticalAlignment="bottom" id="dV5-ny-vi4" userLabel="Bottom">
+                                            <items>
+                                                <group width="0.5" height="1" alignment="left" layout="vertical" id="1iV-Eu-6Uu" userLabel="Left">
+                                                    <items>
+                                                        <button width="0.59999999999999998" height="0.59999999999999998" alignment="center" backgroundImage="minus.square.fill" catalog="system" id="dy8-yO-91o">
+                                                            <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="decreaseScore" destination="AgC-eL-Hgc" id="IBz-aa-0ac"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label width="1" height="0.20000000000000001" alignment="center" verticalAlignment="center" text="remove" textAlignment="center" id="jGW-zV-X4W" userLabel="remove stroke">
+                                                            <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                                <group width="0.51000000000000001" height="1" alignment="left" layout="vertical" id="ifH-mv-bzp" userLabel="Right">
+                                                    <items>
+                                                        <button width="0.59999999999999998" height="0.59999999999999998" alignment="center" backgroundImage="plus.square.fill" catalog="system" id="UUB-gP-AnB">
+                                                            <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="increaseScore" destination="AgC-eL-Hgc" id="gEZ-jo-Llt"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label width="1" height="0.20000000000000001" alignment="center" verticalAlignment="center" text="add" textAlignment="center" id="K7e-gs-nY9" userLabel="add stroke">
+                                                            <color key="textColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" height="1" alignment="left" hidden="YES" layout="vertical" id="DSn-wU-daB">
+                                    <items>
+                                        <group width="1" alignment="left" id="mVf-Ee-i2G">
+                                            <items>
+                                                <group width="30" height="1" alignment="left" verticalAlignment="center" layout="overlap" id="17f-eQ-cgu">
+                                                    <items>
+                                                        <button width="23" height="22" alignment="center" verticalAlignment="center" backgroundImage="chevron.left.circle" catalog="system" id="mDI-h3-KHa">
+                                                            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </button>
+                                                        <button width="1" height="1" alignment="center" verticalAlignment="center" id="wmk-zm-XZP">
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <connections>
+                                                                <action selector="removeSettings" destination="AgC-eL-Hgc" id="k9d-pB-3TF"/>
+                                                            </connections>
+                                                        </button>
+                                                    </items>
+                                                </group>
+                                                <label height="30" alignment="right" text="Settings" id="sLa-6N-BaS"/>
+                                            </items>
+                                        </group>
+                                        <separator alignment="left" id="2w9-bU-esX">
+                                            <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </separator>
+                                        <button width="1" alignment="left" title="change location" id="kvw-Jc-Vf6"/>
+                                        <group width="1" alignment="left" layout="vertical" id="xFH-ZV-wBU">
+                                            <items>
+                                                <separator alignment="center" id="EyD-Sy-92L">
+                                                    <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <label alignment="center" text="number of holes" id="yHk-ti-s0c">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                </label>
+                                                <separator alignment="center" id="B0j-Ee-9YJ">
+                                                    <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                                <group width="1" height="0.40000000000000002" alignment="left" id="8gE-4B-8Zr">
+                                                    <items>
+                                                        <separator alignment="center" id="PPg-Sa-0jz">
+                                                            <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </separator>
+                                                        <button width="0.45000000000000001" height="30" alignment="center" title="9" id="H43-WN-H4y">
+                                                            <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                                                            <connections>
+                                                                <action selector="nineHoles" destination="AgC-eL-Hgc" id="3lC-vs-5ZE"/>
+                                                            </connections>
+                                                        </button>
+                                                        <separator alignment="center" id="0gm-On-PE3">
+                                                            <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </separator>
+                                                        <separator alignment="center" id="QfV-JM-9qI">
+                                                            <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </separator>
+                                                        <button width="0.45000000000000001" height="30" alignment="center" title="18" id="I9S-N1-JsT">
+                                                            <fontDescription key="font" type="boldSystem" pointSize="15"/>
+                                                            <connections>
+                                                                <action selector="eighteenHoles" destination="AgC-eL-Hgc" id="2BW-yn-hbw"/>
+                                                            </connections>
+                                                        </button>
+                                                        <separator alignment="center" id="cPq-iq-dhC">
+                                                            <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </separator>
+                                                    </items>
+                                                </group>
+                                                <separator alignment="left" id="4tf-xC-CDY">
+                                                    <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </separator>
+                                            </items>
+                                            <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </group>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="add" destination="UUB-gP-AnB" id="V3Q-H1-Y4w"/>
+                        <outlet property="eighteen" destination="I9S-N1-JsT" id="RlI-cy-3sn"/>
+                        <outlet property="finalScore" destination="20Z-yE-dla" id="dLo-N8-4WZ"/>
+                        <outlet property="game" destination="R3I-ij-f3o" id="Rgt-gS-QRt"/>
+                        <outlet property="hole" destination="hv3-U6-qeA" id="UN2-xp-MSQ"/>
+                        <outlet property="holesBackground" destination="xFH-ZV-wBU" id="Qtw-Dv-Id9"/>
+                        <outlet property="next" destination="01f-5R-zpU" id="6s5-b7-M7Z"/>
+                        <outlet property="nine" destination="H43-WN-H4y" id="AUB-22-Dtd"/>
+                        <outlet property="remove" destination="dy8-yO-91o" id="15B-I4-VOr"/>
+                        <outlet property="score" destination="W2w-fo-XWN" id="kdA-Zy-VQT"/>
+                        <outlet property="scoreboard" destination="Def-db-VX2" id="lga-mz-GE8"/>
+                        <outlet property="settings" destination="DSn-wU-daB" id="ekf-fB-Ga4"/>
+                        <outlet property="timer" destination="A3k-Lt-qWo" id="BaF-Qh-yHk"/>
+                        <segue destination="MEk-Ci-8aJ" kind="relationship" relationship="nextPage" id="TXS-Ek-Pqc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="25"/>
+        </scene>
+        <!--Hole Picker Controller-->
+        <scene sceneID="eOp-KH-ywg">
+            <objects>
+                <controller id="MEk-Ci-8aJ" customClass="HolePickerController" customModule="Caddy_App_Watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" spacing="2" id="BBb-Hf-npx">
+                            <items>
+                                <tableRow identifier="HoleRowControllerIdentifier" id="4yn-zy-vJ0" customClass="HoleRowController" customModule="Caddy_App_Watch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="SIj-TY-VJI">
+                                        <items>
+                                            <label height="1" alignment="left" text="Hole" id="8Cf-0t-LDh"/>
+                                            <label height="1" alignment="right" text="0" id="XYP-Fj-bZI"/>
+                                            <separator alignment="right" id="ruG-pX-dhQ">
+                                                <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </separator>
+                                            <separator alignment="right" id="OWp-8T-l7A">
+                                                <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </separator>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="8Cf-0t-LDh" id="WUI-1u-ALr"/>
+                                        <outlet property="value" destination="XYP-Fj-bZI" id="Ov1-T2-7gd"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" text="start a new game" textAlignment="center" id="LSa-c2-2pT"/>
+                    </items>
+                    <connections>
+                        <outlet property="holePicker" destination="BBb-Hf-npx" id="2V0-nG-vRQ"/>
+                        <outlet property="prompt" destination="LSa-c2-2pT" id="Zix-he-QnJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="488.59259259259261" y="24.593908629441621"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Caddy_App_Watch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="791"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Caddy_App_Watch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="489" y="494"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="chevron.left.circle" catalog="system" width="128" height="121"/>
+        <image name="minus.square.fill" catalog="system" width="128" height="114"/>
+        <image name="plus.square.fill" catalog="system" width="128" height="114"/>
+    </resources>
+</document>
