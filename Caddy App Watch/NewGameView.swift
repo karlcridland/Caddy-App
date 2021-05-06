@@ -27,7 +27,8 @@ class NewGameView: ScreenView {
     }
     
     func startGame(_ location: String) {
-        
+        let controls = GameControls(frame: CGRect(x: 0, y: self.frame.height-100, width: self.frame.width, height: 100))
+        self.addSubview(controls)
     }
     
     required init?(coder: NSCoder) {
