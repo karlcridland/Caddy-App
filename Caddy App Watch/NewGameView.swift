@@ -25,10 +25,24 @@ class NewGameView: ScreenView {
             startGame(location)
         }
         else{
-            
+            selectCourse()
         }
         
     }
+    
+    // If a game is started without a location set, the player has to choose one from their saved locations - alternatively they can
+    // choose to play a round without pars set. Method brings a view on to screen with all locations with the final option being no
+    // course.
+    
+    func selectCourse(){
+        let view = UIView(frame: CGRect(x: 0, y: self.back.frame.maxX+20, width: self.frame.width, height: self.frame.height-self.back.frame.maxX+20-Settings.bottom))
+        self.addSubview(view)
+        
+        
+    }
+    
+    // Once a location is selected, the game starts and all features (title, current hole, a scroll of all holes to change to, and the
+    // game controls which change the score of the current hole and can move to the next hole).
     
     func startGame(_ location: String) {
         let controls = GameControls(frame: CGRect(x: 0, y: self.frame.height-100-Settings.bottom, width: self.frame.width, height: 100))
