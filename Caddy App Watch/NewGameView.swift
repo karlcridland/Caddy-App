@@ -13,6 +13,9 @@ class NewGameView: ScreenView {
     var location: String?
     let locationPicker = UIScrollView()
     
+    var scores = [Int:Int]()
+    var currentRound: Int?
+    
     init(frame: CGRect, location: String?) {
         self.location = location
         super .init(frame: frame)

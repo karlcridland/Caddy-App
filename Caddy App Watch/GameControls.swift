@@ -21,7 +21,7 @@ class GameControls: UIView {
         self.increase = UIButton(frame: CGRect(x: (2*gap)+(length), y: 20, width: length, height: length))
         self.nextHole = UIButton(frame: CGRect(x: (3*gap)+(2*length), y: 20, width: length, height: length))
         super .init(frame: frame)
-        let images = ["minus.square.fill","plus.square.fill","arrow.right.fill"]
+        let images = ["minus.square.fill","plus.square.fill","arrow.right"]
         [self.decrease,self.increase,self.nextHole].enumerated().forEach { (i,button) in
             button.setUpGameButton(images[i])
             self.addSubview(button)
