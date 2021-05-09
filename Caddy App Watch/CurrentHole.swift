@@ -24,7 +24,7 @@ class CurrentHole: UIView {
         self.score.textAlignment = .right
         
         let bottomBar = UIView(frame: CGRect(x: 0, y: self.frame.height-2, width: self.frame.width, height: 2))
-        bottomBar.backgroundColor = #colorLiteral(red: 0, green: 0.9810667634, blue: 0.5736914277, alpha: 1)
+        bottomBar.backgroundColor = .white
         self.addSubview(bottomBar)
     }
     
@@ -53,7 +53,7 @@ class CurrentHole: UIView {
 
 private extension UILabel{
     func title() {
-        self.textColor = #colorLiteral(red: 0, green: 0.9810667634, blue: 0.5736914277, alpha: 1)
+        self.textColor = .white
         self.font = .systemFont(ofSize: 26, weight: UIFont.Weight(rawValue: 0.3))
     }
 }

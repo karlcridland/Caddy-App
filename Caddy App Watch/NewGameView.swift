@@ -15,12 +15,18 @@ class NewGameView: ScreenView {
     
     var scores = [Int:Int]()
     var currentRound: Int?
+    var numberOfHoles = 9
+    var overUnders = [Int:UILabel]()
+    let controls: GameControls
     
     init(frame: CGRect, location: String?) {
         self.location = location
+        self.controls = GameControls(frame: CGRect(x: 0, y: frame.height-100-Settings.bottom, width: frame.width, height: 100))
         super .init(frame: frame)
-        self.back.setTitleColor(.black, for: .normal)
-        self.back.backgroundColor = #colorLiteral(red: 0, green: 0.9810667634, blue: 0.5736914277, alpha: 1)
+        self.back.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).withAlphaComponent(0.8), for: .normal)
+        self.back.backgroundColor = #colorLiteral(red: 0.2605174184, green: 0.2605243921, blue: 0.260520637, alpha: 1)
+        self.back.layer.borderColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1).withAlphaComponent(0.3).cgColor
+        self.back.layer.borderWidth = 3
         if let location = location{
             self.startGame(location)
         }
@@ -39,13 +45,25 @@ class NewGameView: ScreenView {
         
         let title = UILabel(frame: CGRect(x: 20, y: self.back.frame.maxY+20, width: self.frame.width-40, height: 60))
         title.font = .systemFont(ofSize: 20, weight: UIFont.Weight(rawValue: 0.3))
-        title.text = "Select the course you're playing at:"
+        title.text = "Select the course you're playing:"
         self.addSubview(title)
         
         let view = UIScrollView(frame: CGRect(x: 10, y: title.frame.maxY, width: self.frame.width-20, height: self.frame.height-title.frame.maxY-Settings.bottom))
         self.addSubview(view)
-        view.backgroundColor = .black.withAlphaComponent(0.4)
+        view.backgroundColor = .black.withAlphaComponent(0.8)
         view.layer.cornerRadius = 12
+        
+        let chooseHoles = UISegmentedControl(items: ["9 Holes", "18 Holes"])
+        chooseHoles.frame = CGRect(x: self.back.frame.maxX+20, y: self.back.frame.minY - 1, width: self.frame.width - self.back.frame.maxX - 40, height: self.back.frame.height + 2)
+        chooseHoles.addTarget(self, action: #selector(holesClicked), for: .valueChanged)
+        chooseHoles.selectedSegmentIndex = 0
+        chooseHoles.selectedSegmentTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        chooseHoles.backgroundColor = .white
+        chooseHoles.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(0.3))], for: .normal)
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .normal)
+        self.addSubview(chooseHoles)
         
         func appendOption(_ option: String?, _ y: CGFloat) -> UIView{
             let optionView = UIView(frame: CGRect(x: 10, y: y+10, width: view.frame.width-20, height: 50))
@@ -79,6 +97,19 @@ class NewGameView: ScreenView {
         
     }
     
+    // Changes the value of the hole selection, allowing the user to choose between 9 or 18 holes.
+    
+    @objc func holesClicked(sender: UISegmentedControl){
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        if (sender.selectedSegmentIndex == 0){
+            numberOfHoles = 9
+        }
+        else{
+            numberOfHoles = 18
+        }
+        print(numberOfHoles)
+    }
+    
     @objc func locationClicked(sender: UIButton){
         if let location = sender.accessibilityLabel{
             startGame(location)
@@ -96,14 +127,13 @@ class NewGameView: ScreenView {
             subview.removeFromSuperview()
         }
         self.addSubview(self.back)
-        let controls = GameControls(frame: CGRect(x: 0, y: self.frame.height-100-Settings.bottom, width: self.frame.width, height: 100))
         self.addSubview(controls)
         
         let titleWidth = self.frame.width-self.back.frame.maxX-40
         let title = UILabel(frame: CGRect(x: self.back.frame.maxX+20, y: self.back.frame.minY, width: titleWidth, height: self.back.frame.height))
         title.textAlignment = .right
         title.font = .systemFont(ofSize: 22, weight: UIFont.Weight(0.3))
-        title.textColor = #colorLiteral(red: 0, green: 0.9810667634, blue: 0.5736914277, alpha: 1)
+        title.textColor = .white
         self.addSubview(title)
         
         title.text = "New Game"
@@ -116,6 +146,37 @@ class NewGameView: ScreenView {
         
         let allHoles = UIScrollView(frame: CGRect(x: 0, y: currentHole.frame.maxY, width: self.frame.width, height: controls.frame.minY-currentHole.frame.maxY))
         self.addSubview(allHoles)
+        allHoles.backgroundColor = .black
+        
+        for i in 1 ... numberOfHoles{
+            let holeBackground = UIView(frame: CGRect(x: 10, y: CGFloat(i-1)*60+10, width: allHoles.frame.width-20, height: 50))
+            allHoles.addSubview(holeBackground)
+            holeBackground.layer.cornerRadius = 8
+            holeBackground.layer.backgroundColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
+            allHoles.contentSize = CGSize(width: allHoles.frame.width, height: holeBackground.frame.maxY+10)
+            
+            let width = (holeBackground.frame.width-40)/4
+            
+            let holelabel = UILabel(frame: CGRect(x: 20, y: 0, width: width, height: holeBackground.frame.height))
+            holelabel.text = "Hole \(i)"
+            holeBackground.addSubview(holelabel)
+            holelabel.font = .systemFont(ofSize: 16, weight: UIFont.Weight(0.3))
+            
+            if let location = location{
+                if let par = Settings.holes[location]{
+                    let parLabel = UILabel(frame: CGRect(x: 20+width, y: 0, width: width, height: holeBackground.frame.height))
+                    parLabel.text = "PAR \(par[i-1])"
+                    holeBackground.addSubview(parLabel)
+                    parLabel.font = .systemFont(ofSize: 16, weight: UIFont.Weight(0.3))
+                }
+            }
+            
+            let overUnder = UILabel(frame: CGRect(x: 20+(2*width), y: 0, width: width, height: holeBackground.frame.height))
+            holeBackground.addSubview(overUnder)
+            overUnder.font = .systemFont(ofSize: 16, weight: UIFont.Weight(0.3))
+            overUnders[i] = overUnder
+            
+        }
         
         currentHole.updateHole(1, nil)
     }
@@ -131,9 +192,11 @@ class NewGameView: ScreenView {
 
 private extension UIView{
     func selectable() {
-        self.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        self.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1).withAlphaComponent(0.4)
         self.layer.borderWidth = 3
-        self.layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        self.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         self.layer.cornerRadius = 6
+        self.addShadow(0.1, 2, 7)
+        self.layer.shadowColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
 }

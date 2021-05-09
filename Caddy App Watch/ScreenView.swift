@@ -15,8 +15,8 @@ class ScreenView: UIView {
     override init(frame: CGRect) {
         super .init(frame: frame)
         
-        back.frame = CGRect(x: 20, y: 20, width: 100, height: 40)
-        back.titleLabel!.font = .systemFont(ofSize: 18, weight: UIFont.Weight(rawValue: 0.3))
+        back.frame = CGRect(x: 20, y: 20, width: 80, height: 40)
+        back.titleLabel!.font = .systemFont(ofSize: 16, weight: UIFont.Weight(rawValue: 0.3))
         back.setTitle("back", for: .normal)
         back.setTitleColor(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1), for: .normal)
         back.backgroundColor = .white
