@@ -10,6 +10,7 @@
 		6D13EB09263F2596006BA44A /* NewGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D13EB08263F2596006BA44A /* NewGameView.swift */; };
 		6D13EB0B263F3389006BA44A /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D13EB0A263F3389006BA44A /* ScreenView.swift */; };
 		6D13EB0D263F3A65006BA44A /* SaveBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D13EB0C263F3A65006BA44A /* SaveBanner.swift */; };
+		6D17A01E26497B53007D9075 /* ChooseLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17A01D26497B53007D9075 /* ChooseLocation.swift */; };
 		6D20027E263CD2DD0035F560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20027D263CD2DD0035F560 /* AppDelegate.swift */; };
 		6D200280263CD2DD0035F560 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20027F263CD2DD0035F560 /* SceneDelegate.swift */; };
 		6D200282263CD2DD0035F560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D200281263CD2DD0035F560 /* ViewController.swift */; };
@@ -89,6 +90,7 @@
 		6D13EB08263F2596006BA44A /* NewGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameView.swift; sourceTree = "<group>"; };
 		6D13EB0A263F3389006BA44A /* ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
 		6D13EB0C263F3A65006BA44A /* SaveBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBanner.swift; sourceTree = "<group>"; };
+		6D17A01D26497B53007D9075 /* ChooseLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLocation.swift; sourceTree = "<group>"; };
 		6D20027A263CD2DD0035F560 /* Caddy App Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Caddy App Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D20027D263CD2DD0035F560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D20027F263CD2DD0035F560 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				6D2002C1263CD33B0035F560 /* HomeMenuView.swift */,
 				6D13EB0A263F3389006BA44A /* ScreenView.swift */,
 				6D13EB08263F2596006BA44A /* NewGameView.swift */,
+				6D17A01D26497B53007D9075 /* ChooseLocation.swift */,
 				6D71293126447EFF00C82568 /* GameControls.swift */,
 				6D43DAD126459DB800AEE7AF /* CurrentHole.swift */,
 				6D2002BD263CD33B0035F560 /* GameSetupView.swift */,
@@ -366,6 +369,7 @@
 				6D2002C6263CD33B0035F560 /* AppendOption.swift in Sources */,
 				6D2002C9263CD33B0035F560 /* Player.swift in Sources */,
 				6D43DAD226459DB800AEE7AF /* CurrentHole.swift in Sources */,
+				6D17A01E26497B53007D9075 /* ChooseLocation.swift in Sources */,
 				6D2002CC263CD33B0035F560 /* HomeMenuView.swift in Sources */,
 				6D2002C7263CD33B0035F560 /* TextField.swift in Sources */,
 				6D2002D0263CD33B0035F560 /* UIView.swift in Sources */,

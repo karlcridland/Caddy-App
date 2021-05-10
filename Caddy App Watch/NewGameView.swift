@@ -49,72 +49,9 @@ class NewGameView: ScreenView {
         title.text = "Select the course you're playing:"
         self.addSubview(title)
         
-        let view = UIScrollView(frame: CGRect(x: 10, y: title.frame.maxY, width: self.frame.width-20, height: self.frame.height-title.frame.maxY-Settings.bottom))
-        self.addSubview(view)
-        view.backgroundColor = .black.withAlphaComponent(0.8)
-        view.layer.cornerRadius = 12
+        let choose = ChooseLocation(frame: CGRect(x: 10, y: title.frame.maxY, width: self.frame.width-20, height: self.frame.height-title.frame.maxY-Settings.bottom), newGameView: self)
+        self.addSubview(choose)
         
-        let chooseHoles = UISegmentedControl(items: ["9 Holes", "18 Holes"])
-        chooseHoles.frame = CGRect(x: self.back.frame.maxX+20, y: self.back.frame.minY - 1, width: self.frame.width - self.back.frame.maxX - 40, height: self.back.frame.height + 2)
-        chooseHoles.addTarget(self, action: #selector(holesClicked), for: .valueChanged)
-        chooseHoles.selectedSegmentIndex = 0
-        chooseHoles.selectedSegmentTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        chooseHoles.backgroundColor = .white
-        chooseHoles.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: UIFont.Weight(0.3))], for: .normal)
-        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes(titleTextAttributes, for: .normal)
-        self.addSubview(chooseHoles)
-        
-        func appendOption(_ option: String?, _ y: CGFloat) -> UIView{
-            let optionView = UIView(frame: CGRect(x: 10, y: y+10, width: view.frame.width-20, height: 50))
-            let label = UILabel(frame: CGRect(x: 20, y: 0, width: optionView.frame.width-40, height: optionView.frame.height))
-            label.font = .systemFont(ofSize: 18, weight: UIFont.Weight(rawValue: 0.3))
-            optionView.addSubview(label)
-            label.text = option ?? "Play Without Course"
-            view.addSubview(optionView)
-            view.contentSize = CGSize(width: 0, height: optionView.frame.maxY)
-            optionView.selectable()
-            let button = UIButton(frame: CGRect(x: 0, y: 0, width: optionView.frame.width, height: optionView.frame.height))
-            optionView.addSubview(button)
-            button.accessibilityLabel = option
-            button.addTarget(self, action: #selector(locationClicked), for: .touchUpInside)
-            return optionView
-        }
-        
-        if let locations = Settings.storage["location"]{
-            locations.enumerated().forEach { (i, location) in
-                let _ = appendOption(location, CGFloat(i)*60)
-            }
-        }
-        let without = appendOption(nil, view.contentSize.height+10)
-        
-        if (without.frame.maxY+10 < view.frame.height){
-            view.frame = CGRect(x: 10, y: title.frame.maxY, width: self.frame.width-20, height: without.frame.maxY+10)
-        }
-        
-    }
-    
-    // Changes the value of the hole selection, allowing the user to choose between 9 or 18 holes.
-    
-    @objc func holesClicked(sender: UISegmentedControl){
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-        if (sender.selectedSegmentIndex == 0){
-            numberOfHoles = 9
-        }
-        else{
-            numberOfHoles = 18
-        }
-        print(numberOfHoles)
-    }
-    
-    @objc func locationClicked(sender: UIButton){
-        if let location = sender.accessibilityLabel{
-            startGame(location)
-        }
-        else{
-            startGame(nil)
-        }
     }
     
     // Once a location is selected, the game starts and all features (title, current hole, a scroll of all holes to change to, and the
@@ -187,16 +124,5 @@ class NewGameView: ScreenView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-private extension UIView{
-    func selectable() {
-        self.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1).withAlphaComponent(0.4)
-        self.layer.borderWidth = 3
-        self.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        self.layer.cornerRadius = 6
-        self.addShadow(0.1, 2, 7)
-        self.layer.shadowColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
 }
