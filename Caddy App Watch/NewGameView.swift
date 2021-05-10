@@ -17,6 +17,7 @@ class NewGameView: ScreenView {
     var currentRound: Int?
     var numberOfHoles = 9
     var overUnders = [Int:UILabel]()
+    var holeScores = [Int:UILabel]()
     let controls: GameControls
     
     init(frame: CGRect, location: String?) {
@@ -70,10 +71,7 @@ class NewGameView: ScreenView {
             let label = UILabel(frame: CGRect(x: 20, y: 0, width: optionView.frame.width-40, height: optionView.frame.height))
             label.font = .systemFont(ofSize: 18, weight: UIFont.Weight(rawValue: 0.3))
             optionView.addSubview(label)
-            label.text = "Play Without Course"
-            if let option = option{
-                label.text = option
-            }
+            label.text = option ?? "Play Without Course"
             view.addSubview(optionView)
             view.contentSize = CGSize(width: 0, height: optionView.frame.maxY)
             optionView.selectable()
@@ -136,10 +134,7 @@ class NewGameView: ScreenView {
         title.textColor = .white
         self.addSubview(title)
         
-        title.text = "New Game"
-        if let location = location{
-            title.text = location
-        }
+        title.text = location ?? "New Game"
         
         let currentHole = CurrentHole(frame: CGRect(x: 0, y: self.back.frame.maxY+20, width: self.frame.width, height: 60))
         self.addSubview(currentHole)
@@ -157,25 +152,30 @@ class NewGameView: ScreenView {
             
             let width = (holeBackground.frame.width-40)/4
             
-            let holelabel = UILabel(frame: CGRect(x: 20, y: 0, width: width, height: holeBackground.frame.height))
+            func addLabel(_ x: CGFloat) -> UILabel{
+                let label = UILabel(frame: CGRect(x: x, y: 0, width: width, height: holeBackground.frame.height))
+                holeBackground.addSubview(label)
+                label.font = .systemFont(ofSize: 16, weight: UIFont.Weight(0.3))
+                return label
+            }
+            
+            let holelabel = addLabel(20)
             holelabel.text = "Hole \(i)"
-            holeBackground.addSubview(holelabel)
-            holelabel.font = .systemFont(ofSize: 16, weight: UIFont.Weight(0.3))
             
             if let location = location{
                 if let par = Settings.holes[location]{
-                    let parLabel = UILabel(frame: CGRect(x: 20+width, y: 0, width: width, height: holeBackground.frame.height))
+                    let parLabel = addLabel(20+width)
                     parLabel.text = "PAR \(par[i-1])"
-                    holeBackground.addSubview(parLabel)
-                    parLabel.font = .systemFont(ofSize: 16, weight: UIFont.Weight(0.3))
                 }
             }
             
-            let overUnder = UILabel(frame: CGRect(x: 20+(2*width), y: 0, width: width, height: holeBackground.frame.height))
-            holeBackground.addSubview(overUnder)
-            overUnder.font = .systemFont(ofSize: 16, weight: UIFont.Weight(0.3))
-            overUnders[i] = overUnder
+            let overUnder = addLabel(20+(2*width))
+            self.overUnders[i] = overUnder
             
+            let holeScore = addLabel(20+(3*width))
+            self.holeScores[i] = holeScore
+            holeScore.textAlignment = .right
+            holeScore.text = "0"
         }
         
         currentHole.updateHole(1, nil)
