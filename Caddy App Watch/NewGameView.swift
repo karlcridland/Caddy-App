@@ -54,7 +54,6 @@ class NewGameView: ScreenView {
     
     @objc func changeScore(sender: UIButton){
         if let currentRound = currentRound{
-            print(currentRound)
             if let score = scores[currentRound]{
                 var newScore = score+sender.tag
                 if (newScore < 0){
@@ -214,11 +213,24 @@ class NewGameView: ScreenView {
                 self.holeScores[i] = holeScore
                 holeScore.textAlignment = .right
                 holeScore.text = "0"
+                
+                let button = UIButton(frame: CGRect(x: 0, y: 0, width: holeBackground.frame.width, height: holeBackground.frame.height))
+                holeBackground.addSubview(button)
+                button.addTarget(self, action: #selector(holeButtonClicked), for: .touchUpInside)
+                button.tag = i
             }
             
             currentHole.updateHole(1, nil)
+            
         }
         self.nextRound()
+    }
+    
+    @objc func holeButtonClicked(sender: UIButton){
+        if let _ = scores[sender.tag]{
+            currentRound = sender.tag-1
+            self.nextRound()            
+        }
     }
     
     @objc func resetLocation(){
