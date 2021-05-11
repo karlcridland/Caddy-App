@@ -73,6 +73,11 @@ class NewGameView: ScreenView {
     @objc func nextRound(){
         if let currentRound = currentRound{
             self.currentRound = currentRound+1
+            if (self.currentRound! > numberOfHoles){
+                self.currentRound = numberOfHoles
+                self.gameOver()
+                return
+            }
         }
         else{
             currentRound = 1
@@ -82,6 +87,14 @@ class NewGameView: ScreenView {
         }
         updateHoles()
         updateColors()
+    }
+    
+    // Display shows when the game is finished and all holes have been played.
+    
+    func gameOver() {
+        self.clearScreen()
+        let gameOverScreen = GameOver(frame: CGRect(x: 0, y: self.back.frame.maxY+20, width: self.frame.width, height: self.frame.height-self.back.frame.maxY-60-Settings.bottom), course: location, scores: scores, newGameView: self)
+        self.addSubview(gameOverScreen)
     }
     
     // Methods retrieve all labels associated with a hole in the all holes section and change the color of the
@@ -155,10 +168,7 @@ class NewGameView: ScreenView {
     // game controls which change the score of the current hole and can move to the next hole).
     
     func startGame(_ location: String?) {
-        self.subviews.forEach { subview in
-            subview.removeFromSuperview()
-        }
-        self.addSubview(self.back)
+        self.clearScreen()
         self.addSubview(controls)
         
         let titleWidth = self.frame.width-self.back.frame.maxX-40
@@ -229,12 +239,21 @@ class NewGameView: ScreenView {
     @objc func holeButtonClicked(sender: UIButton){
         if let _ = scores[sender.tag]{
             currentRound = sender.tag-1
-            self.nextRound()            
+            self.nextRound()
         }
     }
     
     @objc func resetLocation(){
         location = nil
+    }
+    
+    // Function removes everything on the screen except for the back button.s
+    
+    func clearScreen(){
+        self.subviews.forEach { subview in
+            subview.removeFromSuperview()
+        }
+        self.addSubview(self.back)
     }
     
     required init?(coder: NSCoder) {
