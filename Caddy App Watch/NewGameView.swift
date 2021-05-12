@@ -71,6 +71,9 @@ class NewGameView: ScreenView {
     }
     
     @objc func nextRound(){
+        if let round = currentRound, let score = scores[round], score == 0{
+            return
+        }
         if let currentRound = currentRound{
             self.currentRound = currentRound+1
             if (self.currentRound! > numberOfHoles){
