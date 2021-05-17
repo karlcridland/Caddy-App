@@ -41,19 +41,25 @@ class DropdownView: UIView{
         
     }
     
+    // Unhides the scroll list of button choices (dropdown variable) and animates it to the height of the buttons it contains, or the
+    // maximum height of 130 pixels.
+    
     @objc func displayDropdown(){
         self.dropdown.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
         self.dropdown.isHidden = false
         if let choices = choices{
+            self.dropdown.contentSize = CGSize(width: self.dropdown.frame.width, height: CGFloat(choices.count*40))
             UIView.animate(withDuration: 0.3) {
                 self.dropdown.alpha = 1
-                self.dropdown.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: CGFloat([190, choices.count*40].min()!))
+                self.dropdown.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: CGFloat([130, choices.count*40].min()!))
                 self.frame = CGRect(x: self.frame.minX, y: self.frame.minY, width: self.frame.width, height: self.dropdown.frame.height)
-            }completion: { _ in
-                self.dropdown.isHidden = false
             }
         }
     }
+    
+    // Reverses the opening of the dropdown menu and changes the value of the button to the selected option, all buttons in the
+    // dropdown scroll view set their text color as black and the highlighted option is set to blue for further interaction to show
+    // the current option.
     
     @objc func updateChoice(sender: UIButton) {
         self.button.setTitle(sender.titleLabel!.text, for: .normal)
@@ -74,6 +80,9 @@ class DropdownView: UIView{
         }
     }
     
+    // Optional value to update choices of a dropdown in cases of the options needing to be updated while the dropdown button is
+    // active. Each button is placed on the dropdown scroll view and given the tag of the enumerated value.
+    
     func updateChoices(_ newChoices: [String]?){
         
         if let newChoices = newChoices{
@@ -92,7 +101,6 @@ class DropdownView: UIView{
                 button.titleLabel?.font = .systemFont(ofSize: 18, weight: UIFont.Weight(rawValue: 0.3))
                 button.contentHorizontalAlignment = .left
                 button.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-                
             }
         }
     }
