@@ -44,6 +44,7 @@ class HomeMenuView: UIView{
             
             buttons["new game"]?.addTarget(self, action: #selector(self.newGame), for: .touchUpInside)
             buttons["game setup"]?.addTarget(self, action: #selector(self.setupGame), for: .touchUpInside)
+            buttons["statistics"]?.addTarget(self, action: #selector(self.viewStats), for: .touchUpInside)
         }
     }
     
@@ -75,7 +76,7 @@ class HomeMenuView: UIView{
     
     @objc func newGame(){
         self.changeBackground(#colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1))
-        removeItems(.fly) {
+        removeItems(.fade) {
             let newGame = NewGameView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height), location: self.location)
             self.addSubview(newGame)
         }
@@ -83,10 +84,18 @@ class HomeMenuView: UIView{
     
     @objc func setupGame(){
         self.changeBackground(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1))
-        self.removeItems(.fly) {
+        self.removeItems(.fade) {
             let gameSetupView = GameSetupView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height), gameSetUp: self)
             self.addSubview(gameSetupView)
             gameSetupView.back.addTarget(gameSetupView.location, action: #selector(gameSetupView.location.hardResetDropdown), for: .touchUpInside)
+        }
+    }
+    
+    @objc func viewStats(){
+        self.changeBackground(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+        removeItems(.fade) {
+            let statsView = StatisticsView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
+            self.addSubview(statsView)
         }
     }
     

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AppendOption:UIView{
+class AppendOption: UIView{
     
     let title: String
     let append = UIButton()
@@ -89,7 +89,13 @@ class AppendOption:UIView{
     
     @objc func textEdited(sender: UITextField){
         UIView.animate(withDuration: 0.4) {
-            if (sender.text!.count > 0 && !Settings.storage[self.title]!.contains(sender.text!)){
+            
+            var titles = [String]()
+            if let storage = Settings.storage[self.title]{
+                titles = storage
+            }
+            
+            if (sender.text!.count > 0 && !titles.contains(sender.text!)){
                 self.append.layer.borderColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
                 self.append.setTitleColor(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1), for: .normal)
                 self.ready = true

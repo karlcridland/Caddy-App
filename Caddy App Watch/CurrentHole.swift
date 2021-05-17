@@ -28,8 +28,7 @@ class CurrentHole: UIView {
         self.addSubview(bottomBar)
     }
     
-    // Method updates the hole, if a hole has been previously updated then the score is set to that otherwise
-    // it starts from zero.
+    // Method updates the hole, if a hole has been previously updated then the score is set to that otherwise it starts from zero.
     
     func updateHole(_ hole: Int, _ score: Int?) {
         self.hole.text = "Hole \(hole)"

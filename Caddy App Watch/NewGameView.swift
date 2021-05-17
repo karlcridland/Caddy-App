@@ -70,6 +70,9 @@ class NewGameView: ScreenView {
         updateHoles()
     }
     
+    // Next round function will not allow the user to progress if they have a score of zero, it is called initially to set up and
+    // move to hole 1 where a zero score is ignored. If the hole hasn't been visited before a score of zero is given to the hole.
+    
     @objc func nextRound(){
         if let round = currentRound, let score = scores[round], score == 0{
             return
@@ -167,8 +170,8 @@ class NewGameView: ScreenView {
         
     }
     
-    // Once a location is selected, the game starts and all features (title, current hole, a scroll of all holes to change to, and the
-    // game controls which change the score of the current hole and can move to the next hole).
+    // Once a location is selected, the game starts and all features (title, current hole, a scroll of all holes to change to, and
+    // the game controls which change the score of the current hole and can move to the next hole).
     
     func startGame(_ location: String?) {
         self.clearScreen()

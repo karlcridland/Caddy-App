@@ -43,6 +43,8 @@
 		6D43DAD226459DB800AEE7AF /* CurrentHole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D43DAD126459DB800AEE7AF /* CurrentHole.swift */; };
 		6D449D76263D90C6000C91FD /* HoleRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D449D75263D90C6000C91FD /* HoleRowController.swift */; };
 		6D71293226447EFF00C82568 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71293126447EFF00C82568 /* GameControls.swift */; };
+		6DE6B85B2652818900994ABB /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE6B85A2652818900994ABB /* StatisticsView.swift */; };
+		6DE6B85D265282C000994ABB /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE6B85C265282C000994ABB /* DropdownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,8 @@
 		6D43DAD126459DB800AEE7AF /* CurrentHole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentHole.swift; sourceTree = "<group>"; };
 		6D449D75263D90C6000C91FD /* HoleRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleRowController.swift; sourceTree = "<group>"; };
 		6D71293126447EFF00C82568 /* GameControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControls.swift; sourceTree = "<group>"; };
+		6DE6B85A2652818900994ABB /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		6DE6B85C265282C000994ABB /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,8 @@
 				6D2002BD263CD33B0035F560 /* GameSetupView.swift */,
 				6D13EB0C263F3A65006BA44A /* SaveBanner.swift */,
 				6D2002C3263CD33B0035F560 /* InputField.swift */,
+				6DE6B85A2652818900994ABB /* StatisticsView.swift */,
+				6DE6B85C265282C000994ABB /* DropdownView.swift */,
 				6D2002BB263CD33A0035F560 /* AppendOption.swift */,
 				6D2002BF263CD33B0035F560 /* Settings.swift */,
 				6D2002C4263CD33B0035F560 /* Int.swift */,
@@ -369,6 +375,7 @@
 				6D2002CA263CD33B0035F560 /* Settings.swift in Sources */,
 				6D13EB0B263F3389006BA44A /* ScreenView.swift in Sources */,
 				6D17A020264AA8AA007D9075 /* GameOver.swift in Sources */,
+				6DE6B85D265282C000994ABB /* DropdownView.swift in Sources */,
 				6D20027E263CD2DD0035F560 /* AppDelegate.swift in Sources */,
 				6D2002C6263CD33B0035F560 /* AppendOption.swift in Sources */,
 				6D2002C9263CD33B0035F560 /* Player.swift in Sources */,
@@ -378,6 +385,7 @@
 				6D2002C7263CD33B0035F560 /* TextField.swift in Sources */,
 				6D2002D0263CD33B0035F560 /* UIView.swift in Sources */,
 				6D200280263CD2DD0035F560 /* SceneDelegate.swift in Sources */,
+				6DE6B85B2652818900994ABB /* StatisticsView.swift in Sources */,
 				6D2002CD263CD33B0035F560 /* Hole.swift in Sources */,
 				6D2002CE263CD33B0035F560 /* InputField.swift in Sources */,
 			);
