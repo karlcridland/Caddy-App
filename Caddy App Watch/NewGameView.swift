@@ -74,9 +74,9 @@ class NewGameView: ScreenView {
     // move to hole 1 where a zero score is ignored. If the hole hasn't been visited before a score of zero is given to the hole.
     
     @objc func nextRound(){
-        if let round = currentRound, let score = scores[round], score == 0{
-            return
-        }
+//        if let round = currentRound, let score = scores[round], score == 0{
+//            return
+//        }
         if let currentRound = currentRound{
             self.currentRound = currentRound+1
             if (self.currentRound! > numberOfHoles){
@@ -109,6 +109,7 @@ class NewGameView: ScreenView {
     private func updateColors(){
         for i in 1 ... numberOfHoles{
             if let _ = scores[i]{
+                print(i)
                 labelsForHole(i)?.forEach({ label in
                     label.textColor = .white
                 })
@@ -127,16 +128,13 @@ class NewGameView: ScreenView {
     }
     
     private func labelsForHole(_ hole: Int) -> [UILabel]? {
-        if let a = holeLabels[hole]{
-            if let b = holePars[hole]{
-                if let c = overUnders[hole]{
-                    if let d = holeScores[hole]{
-                        return [a,b,c,d]
-                    }
-                }
+        var temp = [UILabel]()
+        [holeLabels,holePars,overUnders,holeScores].forEach { array in
+            if let label = array[hole]{
+                temp.append(label)
             }
         }
-        return nil
+        return temp
     }
     
     // Method updates all the scores in the all holes section and also updates the current hole section.
