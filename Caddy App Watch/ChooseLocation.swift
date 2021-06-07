@@ -54,7 +54,7 @@ class ChooseLocation: UIScrollView {
                 let _ = appendOption(location, CGFloat(i)*60)
             }
         }
-        let without = appendOption(nil, self.contentSize.height+10)
+        let without = appendOption(nil, self.contentSize.height)
         
         if (without.frame.maxY+10 < self.frame.height){
             self.frame = CGRect(x: 10, y: newGameView.back.frame.maxY+80, width: newGameView.frame.width-20, height: without.frame.maxY+10)

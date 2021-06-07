@@ -15,7 +15,7 @@ class HomeMenuView: UIView{
     init(){
         super .init(frame: CGRect(x: 0, y: Settings.top, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height-(Settings.bottom)))
         self.homescreen()
-        self.layer.cornerRadius = Settings.cornerRadius
+//        self.layer.cornerRadius = Settings.cornerRadius
     }
     
     @objc func homescreen() {
