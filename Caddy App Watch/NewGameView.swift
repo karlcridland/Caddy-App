@@ -109,7 +109,6 @@ class NewGameView: ScreenView {
     private func updateColors(){
         for i in 1 ... numberOfHoles{
             if let _ = scores[i]{
-                print(i)
                 labelsForHole(i)?.forEach({ label in
                     label.textColor = .white
                 })
