@@ -38,6 +38,22 @@ class GameOver: UIView {
             self.addSubview(button)
         }
         
+        self.newGame.addTarget(self, action: #selector(newGameClicked), for: .touchUpInside)
+        self.mainMenu.addTarget(self, action: #selector(menuClicked), for: .touchUpInside)
+        self.statistics.addTarget(self, action: #selector(statsClicked), for: .touchUpInside)
+        
+    }
+    
+    @objc func newGameClicked(){
+        
+    }
+    
+    @objc func menuClicked(){
+        
+    }
+    
+    @objc func statsClicked(){
+        
     }
     
     required init?(coder: NSCoder) {
